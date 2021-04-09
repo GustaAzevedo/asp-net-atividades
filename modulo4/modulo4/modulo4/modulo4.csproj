@@ -70,12 +70,15 @@
     <Content Include="Web.config" />
     <Content Include="wfFilmes.aspx" />
     <Content Include="wfListaFilmes.aspx" />
+    <Content Include="wfLogin.aspx" />
+    <Content Include="wfPrincipal.aspx" />
     <Content Include="wfResposta.aspx" />
     <Content Include="wfSalarioMinimo.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Anime.cs" />
     <Compile Include="Entities\Filme.cs" />
+    <Compile Include="Entities\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="wfFilmes.aspx.cs">
       <DependentUpon>wfFilmes.aspx</DependentUpon>
@@ -90,6 +93,20 @@
     </Compile>
     <Compile Include="wfListaFilmes.aspx.designer.cs">
       <DependentUpon>wfListaFilmes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfLogin.aspx.cs">
+      <DependentUpon>wfLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfLogin.aspx.designer.cs">
+      <DependentUpon>wfLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfPrincipal.aspx.cs">
+      <DependentUpon>wfPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfPrincipal.aspx.designer.cs">
+      <DependentUpon>wfPrincipal.aspx</DependentUpon>
     </Compile>
     <Compile Include="wfResposta.aspx.cs">
       <DependentUpon>wfResposta.aspx</DependentUpon>
