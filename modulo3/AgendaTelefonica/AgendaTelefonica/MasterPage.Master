@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="AgendaTelefonica.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+</head>
+<body class="container-xl bg-light">
+    <form class="row justify-content-center m-0" id="form1" runat="server">
+        <nav class="col-12 bg-dark p-0">
+            <div class="row justify-content-between m-0">
+                <h1 class="pl-5 text-white">Agenda Web</h1>
+                <asp:Menu CssClass="navbar " ID="Menu1" runat="server" Orientation="Horizontal" StaticDisplayLevels="2" StaticSubMenuIndent="16px">
+                    <Items>
+                        <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Index.aspx"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Usuario.aspx" Text="Usuario" Value="Usuario"></asp:MenuItem>
+                        <asp:MenuItem Text="Contato" Value="Contato" NavigateUrl="~/Contato.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Sair" Value="Sair" NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </nav>
+        <div class="mt-5 conteudo ">
+            <asp:ContentPlaceHolder  ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <footer class="mt-5 col-12 p-0 bg-dark">
+            <div class="row m-0 justify-content-center">
+                <h3 class="text-white">Site desenvolvido por
+                <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="#CF9E57" NavigateUrl="https://myanimelist.net/#_=_">Gustavo de Azevedo</asp:HyperLink>
+                </h3>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>

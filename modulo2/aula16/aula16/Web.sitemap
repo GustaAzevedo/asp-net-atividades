@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="" title=""  description="">
+		<siteMapNode url="wWizard.aspx" title="Wizard"  description="Wizard de passo a passo" />
+		<siteMapNode url="wUpload.aspx" title="Upload"  description="Upload de arquivos" />
+		<siteMapNode url="aula16.aspx" title="Aula16"  description="Upload de arquivos" />
+			<!--<siteMapNode url="wWizard.aspx" title="Wizard"  description="Upload de arquivos"/>
+			<siteMapNode url="wWizard.aspx" title="Upload 2"  description="Upload de arquivos"/>
+		</siteMapNode>-->
+	</siteMapNode>
+</siteMap>
