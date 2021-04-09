@@ -28,7 +28,9 @@ namespace modulo4
                 {
                     HttpCookie login = new HttpCookie("login", tbName.Text);
                     Response.Cookies.Add(login);
-                    Response.Cookies.Add(new HttpCookie("password", tbPass.Text));
+                    Response.Cookies.Add(new HttpCookie("password", tbPass.Text));  
+
+                    Session["login"] = tbName.Text;
                     Response.Redirect("wfPrincipal.aspx");
                 }
 

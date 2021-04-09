@@ -18,13 +18,35 @@ namespace modulo4
                 if (Request.Cookies != null)
                 {
                     lbCookie.Text = Request.Cookies["login"].Value;
-                }
+                }                
             }
-                    
+
+            if (Session["login"] == null)
+            {
+                Response.Redirect("wfLogin.aspx");
+            }
+            else
+            {
+                if (Session["contador"] == null) Session["contador"] = 0;
+                tbIdSession.Text = Session.SessionID.ToString();
+                tbContador.Text = Session["contador"].ToString();
+            }
+
+            if(Application["contador"] == null)
+            {
+                Application["contador"] = 0;
+                tbContaAplica.Text = Application["contador"].ToString();
+            }
+            else
+            {
+                tbContaAplica.Text = Application["contador"].ToString();
+            }
+
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            Session.RemoveAll();
             Response.Redirect("wfLogin.aspx");
         }
 
@@ -35,6 +57,30 @@ namespace modulo4
                 Request.Cookies.Remove("login");
                 int n = Request.Cookies.Count;
             }
+        }
+
+        protected void btnAdd_Click(object sender, EventArgs e)
+        {
+            Session["contador"] = Convert.ToInt32(Session["contador"]) + 1;
+            tbContador.Text = Session["contador"].ToString();
+        }
+
+        protected void btnRemove_Click(object sender, EventArgs e)
+        {
+            Session.Remove("contador");
+            
+        }
+
+        protected void btnAddAplicacao_Click(object sender, EventArgs e)
+        {
+            Application.Lock();
+            Application["contador"] = Convert.ToInt32(Application["contador"]) + 1;
+            Application.UnLock();
+        }
+
+        protected void btnRemoveAplication_Click(object sender, EventArgs e)
+        {
+            Application.Remove("contador");
         }
     }
 }
