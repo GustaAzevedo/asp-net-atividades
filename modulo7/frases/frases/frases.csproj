@@ -74,8 +74,15 @@
     <Content Include="img\system\topocurso.png" />
     <Content Include="Web.config" />
     <Content Include="Default.aspx" />
+    <Content Include="wfAutor.aspx" />
+    <Content Include="wfCategoria.aspx" />
+    <Content Include="wfUsuario.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dal\DALAutor.cs" />
+    <Compile Include="dal\DALCategoria.cs" />
+    <Compile Include="dal\DALFrase.cs" />
+    <Compile Include="dal\DALUsuario.cs" />
     <Compile Include="masterPg.Master.cs">
       <DependentUpon>masterPg.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -83,6 +90,10 @@
     <Compile Include="masterPg.Master.designer.cs">
       <DependentUpon>masterPg.Master</DependentUpon>
     </Compile>
+    <Compile Include="model\Autor.cs" />
+    <Compile Include="model\Categoria.cs" />
+    <Compile Include="model\Frase.cs" />
+    <Compile Include="model\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -90,6 +101,27 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfAutor.aspx.cs">
+      <DependentUpon>wfAutor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfAutor.aspx.designer.cs">
+      <DependentUpon>wfAutor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfCategoria.aspx.cs">
+      <DependentUpon>wfCategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfCategoria.aspx.designer.cs">
+      <DependentUpon>wfCategoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wfUsuario.aspx.cs">
+      <DependentUpon>wfUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wfUsuario.aspx.designer.cs">
+      <DependentUpon>wfUsuario.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -105,9 +137,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="dal\" />
     <Folder Include="img\author\" />
-    <Folder Include="model\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

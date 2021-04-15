@@ -1,2 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters />
+<parameters>
+  <parameter name="ConnectionString-Web.config Connection String" description="ConnectionString Connection String used in web.config by the application to access the database." defaultValue="Data Source=den1.mssql8.gear.host;Persist Security Info=True;User ID=dbfrase;Password=We7FkVg!z_DX" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\proj\\asp-net-atividades\\modulo7\\frases\\frases\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ConnectionString']/@connectionString" />
+  </parameter>
+</parameters>

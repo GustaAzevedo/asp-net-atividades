@@ -9,7 +9,7 @@ namespace frases.model
     {
         public int Id { get; set; }
         public String Text { get; set; }
-        public Autor Autor { get; set; }
-        public Categoria Categoria { get; set; }
+        public int Autor { get; set; }
+        public int Categoria { get; set; }
     }
 }
