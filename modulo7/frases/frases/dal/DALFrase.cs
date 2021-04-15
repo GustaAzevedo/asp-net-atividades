@@ -15,7 +15,7 @@ namespace frases.dal
         public DALFrase()
         {
             System.Configuration.Configuration rootWebConfig = System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration("/MyWebSiteRoot");
-            connString = rootWebConfig.ConnectionStrings.ConnectionStrings[""];
+            connString = rootWebConfig.ConnectionStrings.ConnectionStrings["ConnectionString"];
         }
 
         public void Inserir(Frase obj)

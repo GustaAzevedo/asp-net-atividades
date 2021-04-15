@@ -27,18 +27,20 @@
         <br />
         <asp:RequiredFieldValidator ID="rfvAutor" runat="server" ControlToValidate="ddlAutor" ErrorMessage="Insira um autor"></asp:RequiredFieldValidator>
         <br />
-        <asp:Button ID="btnSalvar" CssClass="btn btn-primary" runat="server" Text="Inserir" />
+        <asp:Button ID="btnSalvar" CssClass="btn btn-primary" runat="server" Text="Inserir" OnClick="btnSalvar_Click" />
         &nbsp;
         <asp:Button ID="btnCancelar" CssClass="btn btn-outline-warning" runat="server" CausesValidation="False" Text="Cancelar" />
         <br />
         <br />
         <br />
-        <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="25px" Text="Tabela de Categorias"></asp:Label>
+        <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="25px" Text="Tabela de Frases"></asp:Label>
         <br />
         <asp:GridView CssClass="table table-dark w-100" ID="gvDadosFrase" runat="server" AutoGenerateColumns="False" Width="304px" >
             <Columns>
                 <asp:BoundField DataField="Id" HeaderText="ID" />
                 <asp:BoundField DataField="frase" HeaderText="Frase" />
+                <asp:BoundField DataField="categoria" HeaderText="Categoria" />
+                <asp:BoundField DataField="autor" HeaderText="Autor" />
                 <asp:CommandField ShowSelectButton="True" />
                 <asp:CommandField ShowDeleteButton="True" />
             </Columns>
