@@ -11,7 +11,15 @@ namespace frases
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(Session["email"] == null)
+            {
+                Response.Redirect("~/wfLogin.aspx");
+            }
+            else
+            {
+                lNome.Text = Session["nome"].ToString();
+                lEmail.Text = Session["email"].ToString();
+            }
         }
     }
 }
