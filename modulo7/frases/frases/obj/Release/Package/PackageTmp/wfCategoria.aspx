@@ -13,10 +13,13 @@
         <br />
         <asp:RequiredFieldValidator ID="rfvCategoria" runat="server" ControlToValidate="txtCateg" ErrorMessage="é necessário inserir um valor"></asp:RequiredFieldValidator>
         <br />
-        <asp:Button ID="btnSalvar" runat="server" Text="Inserir" OnClick="btnInserir_Click" />
+        <asp:Button ID="btnSalvar" CssClass="btn btn-primary" runat="server" Text="Inserir" OnClick="btnInserir_Click" />
         &nbsp;
-        <asp:Button ID="btnCancelar" runat="server" CausesValidation="False" OnClick="btnCancelar_Click" Text="Cancelar" />
+        <asp:Button ID="btnCancelar" CssClass="btn btn-outline-warning" runat="server" CausesValidation="False" OnClick="btnCancelar_Click" Text="Cancelar" />
         <br />
+        <br />
+        <br />
+        <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="25px" Text="Tabela de Categorias"></asp:Label>
         <br />
         <asp:GridView CssClass="table table-dark w-100" ID="gvDadosCat" runat="server" AutoGenerateColumns="False" Width="304px" OnRowDeleting="gvDadosCat_RowDeleting" OnSelectedIndexChanged="gvDadosCat_SelectedIndexChanged" >
             <Columns>

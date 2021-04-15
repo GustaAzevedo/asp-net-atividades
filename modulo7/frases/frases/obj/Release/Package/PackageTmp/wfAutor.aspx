@@ -23,6 +23,9 @@
         <asp:Button CssClass="btn btn-outline-warning" ID="btnCancelar" runat="server" CausesValidation="False"  Text="Cancelar" OnClick="btnCancelar_Click" />
         <br />
         <br />
+        <br />
+        <asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Size="25px" Text="Tabela de Autores"></asp:Label>
+        <br />
         <asp:GridView CssClass="table table-dark w-100" ID="gvDadosAutor" runat="server" AutoGenerateColumns="False" Width="304px" OnRowDeleting="gvDadosAutor_RowDeleting" OnSelectedIndexChanged="gvDadosAutor_SelectedIndexChanged">
             <Columns>
                 <asp:BoundField DataField="id" HeaderText="ID" />

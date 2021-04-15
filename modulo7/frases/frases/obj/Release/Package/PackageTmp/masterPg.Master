@@ -22,11 +22,11 @@
                 <asp:HyperLink ID="hlAutores" runat="server" CssClass="nav-item nav-link" NavigateUrl="~/wfAutor.aspx">Autores</asp:HyperLink>
                 <asp:HyperLink ID="hlFrases" runat="server" CssClass="nav-item nav-link" NavigateUrl="~/wfFrase.aspx">Frases</asp:HyperLink>
                 <asp:HyperLink ID="hlCategoria" runat="server" CssClass="nav-item nav-link" NavigateUrl="~/wfCategoria.aspx">Categorias</asp:HyperLink>
-                <asp:HyperLink ID="hlSair" runat="server" CssClass="nav-item nav-link" NavigateUrl="">Sair</asp:HyperLink>
+                <asp:HyperLink ID="hlSair" runat="server" CssClass="nav-item nav-link" NavigateUrl="~/wfLogin.aspx">Sair</asp:HyperLink>
             </nav>
         </header>
         <main>
-            <div class="p-4 bg-light"> 
+            <div class="p-4  bg-light"> 
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>

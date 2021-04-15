@@ -1,4 +1,6 @@
-﻿using System;
+﻿using frases.dal;
+using frases.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,8 +19,11 @@ namespace frases
             }
             else
             {
-                lNome.Text = Session["nome"].ToString();
-                lEmail.Text = Session["email"].ToString();
+                DALUsuario dal = new DALUsuario();
+                Usuario usu = dal.GetRegistro(Session["email"].ToString());
+
+                lNome.Text = usu.Nome;
+                lEmail.Text = usu.Email;
             }
         }
     }
